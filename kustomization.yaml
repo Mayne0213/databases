@@ -8,3 +8,9 @@ resources:
   - postgresql/argocd/postgres-exporter-read-0.yaml
   - postgresql/argocd/postgres-exporter-read-1.yaml
   - postgresql-dev/argocd/postgresql-dev.yaml
+
+  # Object storage
+  - minio/argocd/minio.yaml
+
+  # Database management tools
+  - pgweb/argocd/pgweb.yaml
