@@ -1,0 +1,31 @@
+# PostgreSQL (Development) Helm Values
+# Chart: https://github.com/bitnami/charts/tree/main/bitnami/postgresql
+# Single instance for development
+
+fullnameOverride: postgresql-dev
+
+image:
+  tag: latest
+
+architecture: standalone
+
+auth:
+  existingSecret: postgresql-password-dev
+  secretKeys:
+    adminPasswordKey: postgres-password
+    userPasswordKey: password
+  username: bluemayne
+  database: postgres
+
+persistence:
+  enabled: true
+  size: 10Gi
+  storageClass: local-path
+
+resources:
+  requests:
+    memory: "256Mi"
+    cpu: "30m"  # Reduced to 30% of original (100m -> 30m)
+
+metrics:
+  enabled: false
