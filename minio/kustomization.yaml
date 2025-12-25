@@ -5,3 +5,5 @@ resources:
   # ArgoCD Application 리소스는 infrastructure/kustomization.yaml에서 관리
   # - argocd/minio.yaml
   - vault/minio-root-password.yaml
+  - ingress-api.yaml
+  - ingress-console.yaml

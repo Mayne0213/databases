@@ -8,3 +8,4 @@ resources:
   - vault/serviceaccount.yaml
   - vault/secretstore.yaml
   - vault/pgweb-secret.yaml
+  - ingress.yaml
