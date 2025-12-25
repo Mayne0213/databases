@@ -52,6 +52,10 @@ readReplicas:
     size: 20Gi
     storageClass: local-path
 
+  # Exclude read replicas from Velero backup (only backup primary)
+  podAnnotations:
+    backup.velero.io/backup-volumes-excludes: "data"
+
   # PostgreSQL configuration (must match primary for replication)
   extendedConfiguration: |
     max_connections = 200
