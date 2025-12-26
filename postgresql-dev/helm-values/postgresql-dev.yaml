@@ -26,6 +26,9 @@ resources:
   requests:
     memory: "256Mi"
     cpu: "30m"  # Reduced to 30% of original (100m -> 30m)
+  limits:
+    # cpu: removed to prevent throttling
+    memory: "1Gi"
 
 metrics:
   enabled: false
