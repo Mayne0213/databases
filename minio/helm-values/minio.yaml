@@ -65,6 +65,12 @@ consoleIngress:
 # This prevents Kubernetes from injecting service-related environment variables
 enableServiceLinks: false
 
+# Pod annotations for Velero backup exclusion
+# Exclude PVC data from backup (prevent circular backup of velero-backups bucket)
+# MinIO resources (StatefulSet, Service, etc.) will still be backed up
+podAnnotations:
+  backup.velero.io/backup-volumes-excludes: export
+
 # Use soft anti-affinity since worker-1 needs 2 pods (has 2 disks)
 affinity:
   podAntiAffinity:
