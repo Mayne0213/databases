@@ -1,6 +1,10 @@
 # Longhorn Helm Values
 # Chart: https://github.com/longhorn/longhorn
 
+# Pre-upgrade checker - disable for first install
+preUpgradeChecker:
+  jobEnabled: false
+
 # Persistence settings
 persistence:
   defaultClass: true  # Set Longhorn as default StorageClass
