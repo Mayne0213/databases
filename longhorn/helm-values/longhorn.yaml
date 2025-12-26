@@ -1,9 +1,10 @@
 # Longhorn Helm Values
 # Chart: https://github.com/longhorn/longhorn
 
-# Pre-upgrade checker - disable for first install
+# Pre-upgrade checker - disable for ArgoCD/GitOps (per Longhorn docs)
 preUpgradeChecker:
   jobEnabled: false
+  upgradeVersionCheck: false
 
 # Persistence settings
 persistence:
