@@ -27,7 +27,6 @@ resources:
     memory: "256Mi"
     cpu: "30m"  # Reduced to 30% of original (100m -> 30m)
   limits:
-    cpu: null  # Explicitly set to null to remove CPU throttling
     memory: "1Gi"
 
 metrics:
