@@ -54,8 +54,14 @@ spec:
     customQueriesConfigMap:
       - name: cnpg-default-monitoring
         key: queries
-    # Note: podMonitorMetadata is not supported by CNPG operator
-    # PodMonitor labels can be added via separate PodMonitor resource if needed
+    # Add pod labels to metrics for Grafana dashboard compatibility
+    podMonitorRelabelings:
+      # Add cluster label from pod label
+      - sourceLabels: [__meta_kubernetes_pod_label_cnpg_io_cluster]
+        targetLabel: cluster
+      # Add instance role label
+      - sourceLabels: [__meta_kubernetes_pod_label_cnpg_io_instanceRole]
+        targetLabel: role
 
   # Backup disabled - using Velero for backups instead
 
