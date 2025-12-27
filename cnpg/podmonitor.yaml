@@ -3,6 +3,8 @@ kind: PodMonitor
 metadata:
   name: cnpg-podmonitor
   namespace: postgresql-cnpg
+  labels:
+    release: prometheus  # Prometheus가 이 PodMonitor를 선택하도록 라벨 추가
 spec:
   selector:
     matchLabels:
