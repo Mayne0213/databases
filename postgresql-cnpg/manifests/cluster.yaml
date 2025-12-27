@@ -51,6 +51,9 @@ spec:
   # Monitoring
   monitoring:
     enablePodMonitor: true
+    customQueriesConfigMap:
+      - name: cnpg-default-monitoring
+        key: queries
     # Note: podMonitorMetadata is not supported by CNPG operator
     # PodMonitor labels can be added via separate PodMonitor resource if needed
 
