@@ -12,3 +12,10 @@ spec:
   podMetricsEndpoints:
     - port: metrics
       path: /metrics
+      relabelings:
+        # Add cluster label from pod label for Grafana dashboard compatibility
+        - sourceLabels: [__meta_kubernetes_pod_label_cnpg_io_cluster]
+          targetLabel: cluster
+        # Add instance role label
+        - sourceLabels: [__meta_kubernetes_pod_label_cnpg_io_instanceRole]
+          targetLabel: role
