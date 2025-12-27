@@ -51,9 +51,8 @@ spec:
   # Monitoring
   monitoring:
     enablePodMonitor: true
-    podMonitorMetadata:
-      labels:
-        release: prometheus
+    # Note: podMonitorMetadata is not supported by CNPG operator
+    # PodMonitor labels can be added via separate PodMonitor resource if needed
 
   # Backup disabled - using Velero for backups instead
 
