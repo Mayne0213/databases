@@ -12,8 +12,7 @@ resources:
   # CNPG Cluster
   - manifests/cluster.yaml
 
-  # PodMonitor for Prometheus metrics collection
-  - manifests/podmonitor.yaml
+  # PodMonitor is auto-created by CNPG operator via cluster.spec.monitoring.enablePodMonitor
 
   # Scheduled Backup - Disabled, using Velero instead
   # - manifests/scheduled-backup.yaml
