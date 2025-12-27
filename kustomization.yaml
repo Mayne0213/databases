@@ -9,10 +9,6 @@ resources:
   - longhorn/argocd/longhorn.yaml
 
   # PostgreSQL databases
-  - postgresql/argocd/postgresql.yaml
-  - postgresql/argocd/postgres-exporter.yaml
-  - postgresql/argocd/postgres-exporter-read-0.yaml
-  - postgresql/argocd/postgres-exporter-read-1.yaml
   - postgresql-dev/argocd/postgresql-dev.yaml
   - postgresql-cnpg/argocd/postgresql-cnpg.yaml
 
