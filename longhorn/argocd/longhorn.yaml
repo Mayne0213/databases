@@ -63,6 +63,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: engineimages.longhorn.io
@@ -72,6 +73,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: instancemanagers.longhorn.io
@@ -81,6 +83,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: nodes.longhorn.io
@@ -90,6 +93,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: replicas.longhorn.io
@@ -99,6 +103,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: settings.longhorn.io
@@ -108,6 +113,7 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
     - group: apiextensions.k8s.io
       kind: CustomResourceDefinition
       name: volumes.longhorn.io
@@ -117,3 +123,4 @@ spec:
         - .metadata.annotations
         - .metadata.generation
         - .metadata.resourceVersion
+        - .spec.preserveUnknownFields
