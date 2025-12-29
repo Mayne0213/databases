@@ -14,7 +14,7 @@ resources:
   - postgresql-cnpg/argocd/postgresql-cnpg.yaml
 
   # Object storage
-  - minio/argocd/minio.yaml
+  - minio/argocd.yaml
 
   # Database management tools
   - pgweb/argocd.yaml
