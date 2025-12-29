@@ -4,7 +4,8 @@ kind: Kustomization
 namespace: longhorn-system
 
 resources:
-  - ingress/longhorn-ingress.yaml
+  - namespace.yaml
+  - ingress.yaml
   - nodes/mayne-vcn.yaml
   - nodes/mayne-worker-1.yaml
   - nodes/mayne-worker-2.yaml

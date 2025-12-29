@@ -15,7 +15,7 @@ spec:
       targetRevision: 5.2.0
       helm:
         valueFiles:
-          - $values/minio/helm-values/minio.yaml
+          - $values/minio/helm-values.yaml
     # Values file from Git repository
     - repoURL: https://gitea0213.kro.kr/bluemayne/databases.git
       targetRevision: main
