@@ -9,7 +9,7 @@ spec:
   project: default
 
   source:
-    repoURL: https://gitea0213.kro.kr/bluemayne/databases.git
+    repoURL: https://github.com/Mayne0213/databases.git
     targetRevision: main
     path: .
 
