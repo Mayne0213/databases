@@ -74,4 +74,5 @@ spec:
   superuserSecret:
     name: postgresql-superuser
 
-  # Note: authentik database created manually (CNPG managed databases not supported in this version)
+  # Note: databases created manually (CNPG managed databases not supported in this version)
+  # - authelia
