@@ -42,20 +42,29 @@ defaultSettings:
 # Longhorn Manager (control plane)
 longhornManager:
   priorityClass: ~
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+      effect: "NoExecute"
   nodeSelector: {}
 
 # Longhorn Driver (CSI driver)
 longhornDriver:
   priorityClass: ~
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+      effect: "NoExecute"
   nodeSelector: {}
 
 # Longhorn UI
 longhornUI:
   replicas: 1
   priorityClass: ~
-  tolerations: []
+  tolerations:
+    - key: "node-role.kubernetes.io/master"
+      operator: "Exists"
+      effect: "NoExecute"
   nodeSelector: {}
 
 # CSI components
