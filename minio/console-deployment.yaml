@@ -48,6 +48,8 @@ spec:
               value: "https://minio.minio0213.kro.kr/oauth_callback"
             - name: CONSOLE_IDP_SCOPES
               value: "openid,profile,email"
+            - name: CONSOLE_IDP_CALLBACK_DYNAMIC
+              value: "on"
           resources:
             requests:
               cpu: 10m
