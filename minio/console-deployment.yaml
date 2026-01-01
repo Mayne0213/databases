@@ -24,27 +24,6 @@ spec:
           env:
             - name: CONSOLE_MINIO_SERVER
               value: "http://minio.minio.svc.cluster.local:9000"
-            - name: CONSOLE_PBKDF_PASSPHRASE
-              valueFrom:
-                secretKeyRef:
-                  name: minio-console-secret
-                  key: CONSOLE_PBKDF_PASSPHRASE
-            - name: CONSOLE_PBKDF_SALT
-              valueFrom:
-                secretKeyRef:
-                  name: minio-console-secret
-                  key: CONSOLE_PBKDF_SALT
-            # Auto-login with MinIO root credentials
-            - name: CONSOLE_ACCESS_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: minio-root-password
-                  key: root-user
-            - name: CONSOLE_SECRET_KEY
-              valueFrom:
-                secretKeyRef:
-                  name: minio-root-password
-                  key: root-password
           resources:
             requests:
               cpu: 10m
