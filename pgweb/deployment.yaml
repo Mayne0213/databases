@@ -29,16 +29,6 @@ spec:
             secretKeyRef:
               name: pgweb-password
               key: database-url
-        - name: PGWEB_AUTH_USER
-          valueFrom:
-            secretKeyRef:
-              name: pgweb-password
-              key: auth-user
-        - name: PGWEB_AUTH_PASS
-          valueFrom:
-            secretKeyRef:
-              name: pgweb-password
-              key: auth-password
         args:
         - "--bind=0.0.0.0"
         - "--listen=8081"
