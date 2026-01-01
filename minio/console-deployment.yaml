@@ -34,24 +34,17 @@ spec:
                 secretKeyRef:
                   name: minio-console-secret
                   key: CONSOLE_PBKDF_SALT
-            # OIDC Configuration
-            - name: CONSOLE_IDP_URL
-              value: "https://auth0213.kro.kr/.well-known/openid-configuration"
-            - name: CONSOLE_IDP_CLIENT_ID
-              value: "minio"
-            - name: CONSOLE_IDP_SECRET
+            # Auto-login with MinIO root credentials
+            - name: CONSOLE_ACCESS_KEY
               valueFrom:
                 secretKeyRef:
-                  name: minio-oidc-secret
-                  key: MINIO_IDENTITY_OPENID_CLIENT_SECRET
-            - name: CONSOLE_IDP_CALLBACK
-              value: "https://minio.minio0213.kro.kr/oauth_callback"
-            - name: CONSOLE_IDP_SCOPES
-              value: "openid,profile,email"
-            - name: CONSOLE_IDP_CALLBACK_DYNAMIC
-              value: "on"
-            - name: CONSOLE_IDP_POLICY
-              value: "consoleAdmin"
+                  name: minio-root-password
+                  key: root-user
+            - name: CONSOLE_SECRET_KEY
+              valueFrom:
+                secretKeyRef:
+                  name: minio-root-password
+                  key: root-password
           resources:
             requests:
               cpu: 10m
