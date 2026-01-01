@@ -50,6 +50,8 @@ spec:
               value: "openid,profile,email"
             - name: CONSOLE_IDP_CALLBACK_DYNAMIC
               value: "on"
+            - name: CONSOLE_IDP_POLICY
+              value: "consoleAdmin"
           resources:
             requests:
               cpu: 10m
