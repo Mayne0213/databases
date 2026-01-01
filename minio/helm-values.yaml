@@ -54,18 +54,6 @@ environment:
   MINIO_BROWSER_REDIRECT_URL: "https://minio.minio0213.kro.kr"
   MINIO_PROMETHEUS_AUTH_TYPE: "public"
 
-# OIDC configuration for Authelia SSO
-oidc:
-  enabled: true
-  configUrl: "https://auth0213.kro.kr/.well-known/openid-configuration"
-  clientId: "minio"
-  existingClientSecretName: "minio-oidc-secret"
-  existingClientSecretKey: "MINIO_IDENTITY_OPENID_CLIENT_SECRET"
-  scopes: "openid,profile,email"
-  redirectUri: "https://minio.minio0213.kro.kr/oauth_callback"
-  rolePolicy: "consoleAdmin"
-  displayName: "Authelia SSO"
-
 # Ingress disabled (managed separately)
 ingress:
   enabled: false
