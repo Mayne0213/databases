@@ -64,6 +64,7 @@ oidc:
   scopes: "openid,profile,email"
   redirectUri: "https://minio.minio0213.kro.kr/oauth_callback"
   claimName: "groups"
+  displayName: "Authelia SSO"
 
 # Ingress disabled (managed separately)
 ingress:
