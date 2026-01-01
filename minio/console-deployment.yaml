@@ -17,7 +17,7 @@ spec:
     spec:
       containers:
         - name: console
-          image: ghcr.io/huncrys/minio-console:v1.8.1
+          image: ghcr.io/georgmangold/console:v1.9.1
           ports:
             - containerPort: 9090
               name: http
