@@ -63,7 +63,7 @@ oidc:
   existingClientSecretKey: "MINIO_IDENTITY_OPENID_CLIENT_SECRET"
   scopes: "openid,profile,email"
   redirectUri: "https://minio.minio0213.kro.kr/oauth_callback"
-  claimName: "groups"
+  rolePolicy: "consoleAdmin"
   displayName: "Authelia SSO"
 
 # Ingress disabled (managed separately)
