@@ -45,7 +45,7 @@ spec:
                   name: minio-oidc-secret
                   key: MINIO_IDENTITY_OPENID_CLIENT_SECRET
             - name: CONSOLE_IDP_CALLBACK
-              value: "https://minio-console.minio0213.kro.kr/oauth_callback"
+              value: "https://minio.minio0213.kro.kr/oauth_callback"
             - name: CONSOLE_IDP_SCOPES
               value: "openid,profile,email"
           resources:
@@ -67,28 +67,3 @@ spec:
     - port: 9090
       targetPort: 9090
       name: http
----
-apiVersion: networking.k8s.io/v1
-kind: Ingress
-metadata:
-  name: minio-console-oidc
-  namespace: minio
-  annotations:
-    cert-manager.io/cluster-issuer: letsencrypt-prod
-spec:
-  ingressClassName: traefik
-  tls:
-    - hosts:
-        - minio-console.minio0213.kro.kr
-      secretName: minio-console-oidc-tls
-  rules:
-    - host: minio-console.minio0213.kro.kr
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: minio-console
-                port:
-                  number: 9090

@@ -47,7 +47,7 @@ spec:
           service:
             name: minio-console
             port:
-              number: 9001
+              number: 9090
   - host: minio0213.kro.kr
     http:
       paths:
@@ -57,4 +57,4 @@ spec:
           service:
             name: minio-console
             port:
-              number: 9001
+              number: 9090
