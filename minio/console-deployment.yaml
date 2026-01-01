@@ -36,7 +36,7 @@ spec:
                   key: CONSOLE_PBKDF_SALT
             # OIDC Configuration
             - name: CONSOLE_IDP_URL
-              value: "https://auth0213.kro.kr"
+              value: "https://auth0213.kro.kr/.well-known/openid-configuration"
             - name: CONSOLE_IDP_CLIENT_ID
               value: "minio"
             - name: CONSOLE_IDP_SECRET
