@@ -43,10 +43,9 @@ service:
   type: ClusterIP
   port: 9000
 
-# Console service
+# Console service disabled - using custom console-deployment.yaml instead
 consoleService:
-  type: ClusterIP
-  port: 9001
+  enabled: false
 
 # Environment variables
 environment:
