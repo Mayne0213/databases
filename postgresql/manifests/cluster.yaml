@@ -65,9 +65,9 @@ spec:
 
   # Backup disabled - using Velero for backups instead
 
-  # Affinity to spread replicas across nodes
+  # Affinity to spread replicas across nodes (soft - prefer different nodes)
   affinity:
-    podAntiAffinityType: required
+    podAntiAffinityType: preferred
     tolerations:
       - key: "node-role.kubernetes.io/master"
         operator: "Exists"
